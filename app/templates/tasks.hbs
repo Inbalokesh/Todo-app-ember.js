@@ -1,0 +1,8 @@
+<h1 class="task-head">Task list</h1>
+<div class="tasks-container">
+  {{#each @model as |task|}}
+    {{!-- template-lint-disable no-log --}}
+    {{log task}}
+    <TaskListItem @subject={{task.subject}} @description={{task.description}} @createdAt={{task.createdAt}}/>
+  {{/each}}
+</div>
